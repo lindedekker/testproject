@@ -1,3 +1,4 @@
+# This gitignore file defines which folders should not get updated to GitHub.com (which is great for data that cannot get public)
 # Data
 /data/temp
 /data/processed
