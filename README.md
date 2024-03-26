@@ -6,7 +6,7 @@ This project template is a demonstration for the RepCo workshop.
 
 Click "Use this template" at the top of this page to create a new repository with the same folder structure.
 
-## Project Structure
+## Project Structure Hi
 
 The project structure distinguishes three kinds of folders:
 - read-only (RO): not edited by either code or researcher
