@@ -24,7 +24,7 @@ samplesize_function <- function(x) {
   print(c(x, sample_size))
   #' paste the outcome variable and its corresponding sample size needed
   #' 
-  #' x = outcome variable of interest
+  #' @usage x = outcome variable of interest
   #' predictor = covariate of interest
   #' theta = postulated hazard ratio for the covariate of interest
 }
@@ -51,7 +51,14 @@ power_function <- function(x) {
     alpha = 0.05
   )
   print(c(x, power))
+  #' paste the outcome variable and its corresponding sample size needed
+  #' 
+  #' @usage x = outcome variable of interest
+  #' predictor = covariate of interest
+  #' theta = postulated hazard ratio for the covariate of interest
+  #' n = number of subjects included
 }
+docstring(power_function)
 
 # change input
 predictor <- cohort$AUC_Clo # the covariate of interest
