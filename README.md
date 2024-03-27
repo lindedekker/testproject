@@ -1,10 +1,14 @@
-# Clofarabine and Fludarabine Exposure
+# Project
 
-This project template is a demonstration for the RepCo workshop.
+This project is a test project for the RepCo workshop.
 
 ## Usage
 
-Click "Use this template" at the top of this page to create a new repository with the same folder structure.
+- Use this template to calculate the sample size needed for your time-to-event analysis with non-binary predictors
+- Use this template to calculate the power of your time-to-event analysis with non-binary predictors
+
+You need a database with your non-binary predictor(s) and the corresponding events (1 and 0) of the outcome(s) of interest. 
+You need a postulated hazard ratio based on a previous (pilot) study. 
 
 ## Project Structure 
 
