@@ -10,9 +10,12 @@ The aim is to calculate the sample size and power needed for studying the effect
 
 Needed:
 -git clone https://github.com/lindedekker/testproject.git
--Install the package "powerSurvEpi"
+-Install the package "powerSurvEpi" & "docstring"
 -A database with your non-binary predictor(s) and the corresponding events (1 and 0) of the outcome(s) of interest. 
 -A postulated hazard ratio based on a previous (pilot) study. 
+
+## Notes 
+This code was written in R version 4.4.0 for Windows
 
 ## Project Structure 
 
