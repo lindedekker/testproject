@@ -9,6 +9,7 @@ The aim is to calculate the sample size and power needed for studying the effect
 - Use this template to calculate the power of your time-to-event analysis with non-binary predictors
 
 Needed:
+-git clone https://github.com/lindedekker/testproject.git
 -Install the package "powerSurvEpi"
 -A database with your non-binary predictor(s) and the corresponding events (1 and 0) of the outcome(s) of interest. 
 -A postulated hazard ratio based on a previous (pilot) study. 
