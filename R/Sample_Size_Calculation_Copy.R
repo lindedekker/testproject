@@ -18,7 +18,7 @@ samplesize_function <- function(x) {
     theta = theta,
     sigma2 = var(predictor), # variance of the covariate of interest
     psi = mean(cohort[[x]] == 1), # proportion of subjects with an event
-    rho2 = sqrt(cor(predictor, cohort[[x]])),
+    rho2 = sqrt(cor(predictor, cohort[[x]])), # square of the multiple correlation coefficient
     alpha = 0.05 # type I error rate
   )
   print(c(x, sample_size))
@@ -29,7 +29,8 @@ predictor <- cohort$AUC_Clo # the covariate of interest
 theta <- 4.8 # postulated hazard ratio for the covariate of interest
 
 # calculate sample size for each outcome variable
-sample_sizes <- lapply(colnames(cohort)[3:11], samplesize_function)
+# check the no. of colnames and change accordingly
+sample_sizes <- lapply(colnames(cohort)[3:10], samplesize_function)
 
 ### Power Calculation ###
 
@@ -37,10 +38,10 @@ sample_sizes <- lapply(colnames(cohort)[3:11], samplesize_function)
 power_function <- function(x) {
   power <- powerEpiCont.default(
     n = n,
-    theta = thetha,
+    theta = theta,
     sigma2 = var(predictor), # variance of the covariate of interest
     psi = mean(cohort[[x]] == 1), # numeric proportion of subjects with an event
-    rho2 = sqrt(cor(predictor, cohort[[x]])),
+    rho2 = sqrt(cor(predictor, cohort[[x]])), # square of the multiple correlation coefficient
     alpha = 0.05
   )
   print(c(x, power))
@@ -49,7 +50,8 @@ power_function <- function(x) {
 # change input
 predictor <- cohort$AUC_Clo # the covariate of interest
 n <- 103 # number of subjects included
-theta <- 2.0 # postulated hazard ratio for the covariate of interest
+theta <- 2.0 # hazard ratio for the covariate of interest
 
-#calculate power for each outcome variable
-power_calculation <- lapply(colnames(cohort)[3:11], power_function)
+# calculate power for each outcome variable
+# check the no. of colnames and change accordingly
+power_calculation <- lapply(colnames(cohort)[3:10], power_function)
