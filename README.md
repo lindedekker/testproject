@@ -15,7 +15,7 @@ Needed:
 -A postulated hazard ratio based on a previous (pilot) study. 
 
 ## Notes 
-This code was written in R version 4.4.0 for Windows
+This code was written in R version 4.3.1 for Windows
 
 ## Project Structure 
 
