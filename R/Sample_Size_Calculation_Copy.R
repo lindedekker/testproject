@@ -9,7 +9,7 @@ powerEpiCont.default()
 setwd("C:/Users/ldekke11/OneDrive - Prinses Maxima Centrum/PhD Project/Courses/Writing_Reproducible_Code/testproject/data/raw")
 cohort <- read.csv("cohort_for_course_WritingReproducibleCode.csv", header = TRUE)
 
-### Sample Size Calculation###
+### Sample Size Calculation ###
 
 # create function for sample size calculation for continuous predictor
 samplesize_function <- function(x) {
@@ -30,7 +30,8 @@ theta <- 4.8 # postulated hazard ratio for the covariate of interest
 
 # calculate sample size for each outcome variable
 # check the no. of colnames and change accordingly
-sample_sizes <- lapply(colnames(cohort)[3:10], samplesize_function)
+sample_sizes <- lapply(colnames(cohort)[3:10], samplesize_function) 
+# in case of NaN: rho2 is negative. Can be solved by sqrt(x+0i).
 
 ### Power Calculation ###
 
@@ -55,3 +56,4 @@ theta <- 2.0 # hazard ratio for the covariate of interest
 # calculate power for each outcome variable
 # check the no. of colnames and change accordingly
 power_calculation <- lapply(colnames(cohort)[3:10], power_function)
+# in case of NaN: rho2 is negative. Can be solved by sqrt(x+0i).
