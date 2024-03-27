@@ -52,3 +52,26 @@ Create a citation file for your repository using [cffinit](https://citation-file
 ## License
 
 This project is licensed under the terms of the [MIT License](/LICENSE).
+
+## Session info at 27-March-2024. You can also check the renv lock file. 
+
+R version 4.3.1 (2023-06-16 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19045)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=English_Netherlands.utf8  LC_CTYPE=English_Netherlands.utf8   
+[3] LC_MONETARY=English_Netherlands.utf8 LC_NUMERIC=C                        
+[5] LC_TIME=English_Netherlands.utf8    
+
+time zone: Europe/Amsterdam
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.3.1    tools_4.3.1       rstudioapi_0.16.0

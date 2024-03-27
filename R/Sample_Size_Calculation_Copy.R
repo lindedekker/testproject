@@ -2,10 +2,6 @@
 library(powerSurvEpi)
 library(docstring)
 
-# functions for power- and sample size calculation for non-binary covariates.
-ssizeEpiCont.default()
-powerEpiCont.default()
-
 # load database
 setwd("C:/Users/ldekke11/OneDrive - Prinses Maxima Centrum/PhD Project/Courses/Writing_Reproducible_Code/testproject/data/raw")
 cohort <- read.csv("cohort_for_course_WritingReproducibleCode.csv", header = TRUE)
