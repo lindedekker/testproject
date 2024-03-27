@@ -1,5 +1,6 @@
 # load required package
 library(powerSurvEpi)
+library(docstring)
 
 # functions for power- and sample size calculation for non-binary covariates.
 ssizeEpiCont.default()
