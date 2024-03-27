@@ -1,14 +1,17 @@
 # Project
 
 This project is a test project for the RepCo workshop.
+The aim is to calculate the sample size and power needed for studying the effect of clofarabine and fludarabine exposure on clinical outcome in allo-HCT.
 
 ## Usage
 
 - Use this template to calculate the sample size needed for your time-to-event analysis with non-binary predictors
 - Use this template to calculate the power of your time-to-event analysis with non-binary predictors
 
-You need a database with your non-binary predictor(s) and the corresponding events (1 and 0) of the outcome(s) of interest. 
-You need a postulated hazard ratio based on a previous (pilot) study. 
+Needed:
+-Install the package "powerSurvEpi"
+-A database with your non-binary predictor(s) and the corresponding events (1 and 0) of the outcome(s) of interest. 
+-A postulated hazard ratio based on a previous (pilot) study. 
 
 ## Project Structure 
 

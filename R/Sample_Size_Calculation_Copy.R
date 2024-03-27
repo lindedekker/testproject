@@ -14,12 +14,12 @@ cohort <- read.csv("cohort_for_course_WritingReproducibleCode.csv", header = TRU
 # create function for sample size calculation for continuous predictor
 samplesize_function <- function(x) {
   sample_size <- ssizeEpiCont.default(
-    power = 0.806, # postulated power
+    power = 0.806,
     theta = theta,
-    sigma2 = var(predictor), # variance of the covariate of interest
-    psi = mean(cohort[[x]] == 1), # proportion of subjects with an event
-    rho2 = sqrt(cor(predictor, cohort[[x]])), # square of the multiple correlation coefficient
-    alpha = 0.05 # type I error rate
+    sigma2 = var(predictor),
+    psi = mean(cohort[[x]] == 1),
+    rho2 = sqrt(cor(predictor, cohort[[x]])),
+    alpha = 0.05
   )
   print(c(x, sample_size))
 }
@@ -29,9 +29,8 @@ predictor <- cohort$AUC_Clo # the covariate of interest
 theta <- 4.8 # postulated hazard ratio for the covariate of interest
 
 # calculate sample size for each outcome variable
-# check the no. of colnames and change accordingly
-sample_sizes <- lapply(colnames(cohort)[3:10], samplesize_function) 
-# in case of NaN: rho2 is negative. Can be solved by sqrt(x+0i).
+sample_sizes <- lapply(colnames(cohort)[3:10], samplesize_function)
+# in case of NaN: cor() is negative. Can be solved by sqrt(x+0i).
 
 ### Power Calculation ###
 
@@ -40,9 +39,9 @@ power_function <- function(x) {
   power <- powerEpiCont.default(
     n = n,
     theta = theta,
-    sigma2 = var(predictor), # variance of the covariate of interest
-    psi = mean(cohort[[x]] == 1), # numeric proportion of subjects with an event
-    rho2 = sqrt(cor(predictor, cohort[[x]])), # square of the multiple correlation coefficient
+    sigma2 = var(predictor),
+    psi = mean(cohort[[x]] == 1),
+    rho2 = sqrt(cor(predictor, cohort[[x]])),
     alpha = 0.05
   )
   print(c(x, power))
@@ -54,6 +53,5 @@ n <- 103 # number of subjects included
 theta <- 2.0 # hazard ratio for the covariate of interest
 
 # calculate power for each outcome variable
-# check the no. of colnames and change accordingly
 power_calculation <- lapply(colnames(cohort)[3:10], power_function)
-# in case of NaN: rho2 is negative. Can be solved by sqrt(x+0i).
+# in case of NaN: cor() is negative. Can be solved by sqrt(x+0i).
