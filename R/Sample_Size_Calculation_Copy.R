@@ -23,8 +23,8 @@ samplesize_function <- function(x) {
     alpha = 0.05
   )
   print(c(x, sample_size))
-  #' paste the outcome variable and its corresponding sample size needed
-  #' 
+  #' @title sample size calculation
+  #' @description the outcome variable and its corresponding sample size needed
   #' @usage x = outcome variable of interest
   #' predictor = covariate of interest
   #' theta = postulated hazard ratio for the covariate of interest
@@ -52,8 +52,8 @@ power_function <- function(x) {
     alpha = 0.05
   )
   print(c(x, power))
-  #' paste the outcome variable and its corresponding power
-  #' 
+  #' @title Power calculation
+  #' @description will give the outcome variable and its corresponding power
   #' @usage x = outcome variable of interest
   #' predictor = covariate of interest
   #' theta = hazard ratio for the covariate of interest
